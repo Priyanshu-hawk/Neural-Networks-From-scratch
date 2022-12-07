@@ -1,12 +1,12 @@
 """
 Basic And Gate
 
-1 & 1 = 1
-1 & 0 = 0
-0 & 1 = 0
-0 & 0 = 0
+1 | 1 = 1
+1 | 0 = 1
+0 | 1 = 1
+0 | 0 = 0
 
-Expected = [1,0,0,0]
+Expected = [1,1,1,0]
 """
 
 input_layer = [[1,1],
@@ -19,7 +19,7 @@ weights = [1,1]
 bias = -1
 
 def step_fn(n_out):
-    if n_out >= 1:
+    if n_out >= 0:
         return 1
     return 0
 
